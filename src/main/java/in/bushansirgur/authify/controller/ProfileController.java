@@ -16,7 +16,7 @@ public class ProfileController {
 
     @PostMapping("/register")
     @ResponseStatus(HttpStatus.CREATED)
-    public ProfileResponse register(@Valid @RequestBody ProfileRequest request){
+    public ProfileResponse register(@Valid @RequestBody ProfileRequest request) {
         ProfileResponse response = profileService.createProfile(request);
         //TODO: send welcome email
         return response;
